@@ -14,8 +14,8 @@ import {JsonService} from './jsonservice';
 })
 export class AppComponent {
   title = 'prueba';
-  constructor(public json: JsonService ){
-    this.json.getJson('http://localhost:4200/assets/ofertas.json').subscribe((res:any)=>{
+  constructor(public json: JsonService  ){
+    this.json.getJson('https://api.npoint.io/5c3145a872b75c2d039c').subscribe((res:any)=>{
       console.log(res); 
     })
   }
