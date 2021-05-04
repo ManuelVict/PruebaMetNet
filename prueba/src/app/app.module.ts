@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { Observable } from 'rxjs/Observable';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { OfferComponent } from './components/offer/offer.component';
@@ -13,12 +12,16 @@ import  {HttpClientModule} from '@angular/common/http';
 
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
     OfferComponent,
     PricesComponent,
-    CharacteristicsComponent
+    CharacteristicsComponent,
+    
+    
   ],
   imports: [
     BrowserModule,
@@ -29,13 +32,11 @@ import  {HttpClientModule} from '@angular/common/http';
   bootstrap: [AppComponent]
 })
 export class AppModule { 
+
+     getId(){
+    var combo = document.getElementById("oferta");
+    console.log(combo)
+  }
+  
   
 }
-function prueba() {
-  fetch('app/file/oferta.txt')
-    .then(respuesta => respuesta.json)
-    .then(respuesta => console.log(respuesta))
-}
-
-prueba()
-

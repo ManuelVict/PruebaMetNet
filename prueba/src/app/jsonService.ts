@@ -13,5 +13,8 @@ export class JsonService {
 
     getJson(url:string){
         return this.http.get(url); 
+
     }
+
+    
 }
